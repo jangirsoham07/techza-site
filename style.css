@@ -192,3 +192,101 @@ footer {
 .contact-box a:hover {
     text-decoration: underline;
 }
+/* Your existing styles remain unchanged... */
+
+/* -------------------------------
+   ✅ RESPONSIVE DESIGN STARTS HERE
+--------------------------------- */
+
+/* Tablets and smaller laptops */
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1.05rem;
+  }
+
+  nav a {
+    margin-left: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .mod-card {
+    padding: 1.5rem;
+  }
+}
+
+/* Smartphones and smaller screens */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .logo {
+    margin-bottom: 0.5rem;
+  }
+
+  nav {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  nav a {
+    margin-left: 0;
+    font-size: 1rem;
+  }
+
+  .hero {
+    padding: 3rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .downloads,
+  .downloads-legacy,
+  .about,
+  .contact-section {
+    padding: 2rem 1rem;
+  }
+
+  .mod-card {
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1.2rem;
+  }
+
+  .about-text,
+  .contact-box {
+    padding: 1.5rem;
+    width: 100%;
+  }
+
+  .about-text h2,
+  .contact-box h2 {
+    font-size: 1.4rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+}
