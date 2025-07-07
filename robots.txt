@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://techza.netlify.app/sitemap.xml
