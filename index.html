@@ -4,104 +4,162 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Techza | Home</title>
+  <title>Techza | Login</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="assets/favicon.png" alt="Techza Logo" />
-  <meta name="google-site-verification" content="4Kz6aUZDV8uShHkjOqrI4xFxFASK3CiQKpXpvkFjoN0" />
-  <title>Techza – Download Modded Apps, Tools & Games for Free</title>
-  <meta name="description" content="Techza offers the latest modded Android apps, games, tools, and utility mods. 100% safe, fast downloads – no ads, no bloat.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://techza.netlify.app/">
-  <meta name="google-adsense-account" content="ca-pub-7196592380142663">
+  <style>
+    /* Login Page Styles */
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(to right, #00bcd4, #007bff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-container {
+      background: #fff;
+      padding: 2.5rem;
+      border-radius: 12px;
+      width: 360px;
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .login-container h2 {
+      margin-bottom: 1rem;
+      font-weight: 800;
+      color: #007bff;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    .login-container input:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .login-container button:hover {
+      background: #0056b3;
+    }
+
+    .login-container p {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      color: #222;
+    }
+
+    .login-container a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .login-container a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 500px) {
+      .login-container {
+        width: 90%;
+        padding: 2rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <header>
-    <div class="logo">Techza</div>
-    <nav>
-      <a href="/">Home</a>
-      <a href="About.html">About Us</a>
-      <a href="Contacts.html">Contacts</a>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <h1>MOD Your Game, Your Way!</h1>
-    <p>Download the latest, safest, and most exciting mods for your favorite games.</p>
-    <a href="#downloads" class="btn-primary">Explore Mods</a>
-  </section>
-
-  <section class="downloads" id="downloads">
-    <h2>🔥 Trending Mods</h2>
-
-    <div class="mod-card">
-      <h3>#1. Download Menyoo Trainer</h3>
-      <p>Unlock full GTA V experience on PC — no login needed!</p>
-      <a href="https://www.mediafire.com/file/ews15oq233aeypf/12952e-MenyooSP.zip/file" class="btn-secondary">Download Now</a>
-    </div>
-  </section>
-
-  <section class="downloads">
-    <h2>🕹️ GTA V – Legacy Edition</h2>
-
-    <div class="mod-card">
-      <h3>#2. Download Grand Theft Auto V – Legacy Edition</h3>
-      <p>
-        Get the full Grand Theft Auto V game for your PC – Story Mode only (no Online Edition).<br />
-        This is a torrent file provided by FitGirl Repack.
-      </p>
-
-      <p><strong>Note:</strong> The torrent file size is approximately <strong>63 GB</strong>.</p>
-
-      <p>
-        <strong>Installation Instructions:</strong><br>
-        1. Download the torrent file and open it using any torrent client (like qBittorrent or uTorrent).<br>
-        2. Before starting the download, you'll see a list of files included — <strong>optional files for NVE shaders or enhanced visuals</strong> are part of this list.<br>
-        3. If you're on a low-end ("potato") PC, it is recommended to <strong>uncheck those optional files</strong> to save space and improve performance.<br>
-        4. Once selected, start the torrent download.<br>
-        5. After the download completes, locate and run <code>Setup.exe</code> to begin installation.<br>
-        6. Follow the on-screen instructions to complete setup.<br>
-        7. After installation, the game will occupy approximately <strong>130 GB</strong> on your drive.
-      </p>
-
-      <a href="assets/Grand Theft Auto V [FitGirl Repack].torrent" class="btn-secondary">Download Now</a>
-    </div>
-  </section>
-<section class="downloads">
-  <div class="mod-card">
-    <h3>📱 Android Mods</h3>
-    <p>Discover our exclusive APK mod collection for Android games.</p>
-    <a href="AndroidMods.html" class="btn-secondary">Browse Android Mods</a>
+  <div class="login-container">
+    <h2>Login to Techza</h2>
+    <input type="email" id="email" placeholder="Enter your email" required />
+    <input type="password" id="password" placeholder="Enter your password" required />
+    <button onclick="login()">Login</button>
+    <p>Don't have an account? <a href="#" onclick="signup()">Sign Up</a></p>
   </div>
-</section>
 
-  <footer>
-    <p>&copy; 2025 Techza.in — All Rights Reserved</p>
-  </footer>
+  <!-- Firebase SDKs -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-auth.js";
+
+    // Firebase config
+    const firebaseConfig = {
+      apiKey: "AIzaSyA8IuaNR9P8jXh9dl4aWOVd1SuyPwquP3g",
+      authDomain: "techza-login.firebaseapp.com",
+      projectId: "techza-login",
+      storageBucket: "techza-login.firebasestorage.app",
+      messagingSenderId: "110575623943",
+      appId: "1:110575623943:web:9e2d3cb9bc5ec5e80e2fa2",
+      measurementId: "G-13D0W073QJ"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // Login function
+    function login() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      if (!email || !password) {
+        alert("Please fill in both fields!");
+        return;
+      }
+
+      signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          alert("Welcome back!");
+          window.location = "home.html"; // redirect to homepage
+        })
+        .catch((error) => {
+          alert(error.message);
+        });
+    }
+
+    // Signup function
+    function signup() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      if (!email || !password) {
+        alert("Please fill in both fields!");
+        return;
+      }
+
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          alert("Account created successfully!");
+        })
+        .catch((error) => {
+          alert(error.message);
+        });
+    }
+  </script>
 </body>
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyA8IuaNR9P8jXh9dl4aWOVd1SuyPwquP3g",
-    authDomain: "techza-login.firebaseapp.com",
-    projectId: "techza-login",
-    storageBucket: "techza-login.firebasestorage.app",
-    messagingSenderId: "110575623943",
-    appId: "1:110575623943:web:9e2d3cb9bc5ec5e80e2fa2",
-    measurementId: "G-13D0W073QJ"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
 </html>
-
